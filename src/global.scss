@@ -1,0 +1,117 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.toolbar-background {
+    --background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+}
+
+.genre-list {
+    border-left: 5px solid #093145;
+    background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+    font-weight: bold;
+    color: #093145;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.genre-list span {
+    display: inline-block;
+    padding: 10px 0px 10px 20px;
+    width: 80%;
+}
+
+.favorite-icon {
+    font-size: 20px;
+    color: #c02f1d;
+    width: 10%;
+}
+
+.share-icon {
+    font-size: 20px;
+    color: #c02f1d;
+    width: 10%;
+}
+
+.remove-favorite-icon {
+    font-size: 20px;
+    color: #c02f1d;
+    width: 10%;
+}
+
+ion-title ion-col {
+    display: flex;
+    align-items: center;
+}
+
+ion-header ion-icon {
+    color: white;
+    font-size: 22px;
+}
+
+.alert-head {
+    background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+}
+
+.netflix-button, .share-button, .favorite-button {
+    width: 75px;
+    background-color: steelblue !important;
+    color: #fff !important;
+    font-size: 15px !important;
+}
+
+.netflix-button span, .share-button span, .favorite-button span {
+    justify-content: center !important;
+}
+
+.favorite-button {
+    margin-right: 0px !important;
+}
+
+.alert-button-group {
+    flex-direction: row !important;
+    padding: 15px !important;
+}
+
+.genre-modal {
+    --height: auto;
+    --min-height: 282px;
+    --width: 80%;
+    --border-radius: 5px;
+}
+
+ion-title {
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+}
+
+.modal-content ion-button {
+    --background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+    color: royalblue;
+    font-weight: bold;
+}

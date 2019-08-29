@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="toolbar-background">
+    <ion-buttons slot="start">
+      <ion-menu-button style="color: white"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Netflix Hidden Genres
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let genre of genres | search : terms">
+      <!-- 첫화면, 상위 장르만 출력 -->
+      <ion-col *ngIf="terms == '' && genre.parent_id == parent_id && parent_id == 0">
+        <div class="genre-list" routerLink="/genre/{{ genre.id }}">
+          <span style="width: 100%;">{{ genre.name }}</span>
+        </div>
+      </ion-col>
+      <!-- 검색 결과 출력 -->
+      <ion-col *ngIf="terms != ''">
+        <div class="genre-list">
+          <span (click)="openModal(genre)">{{ genre.name }}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "netflix-hidden-category",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
